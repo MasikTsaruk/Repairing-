@@ -62,5 +62,3 @@ function electro_service_assets(): void
         true
     );
 }
-
-add_action('wp_enqueue_scripts', 'electro_service_assets');

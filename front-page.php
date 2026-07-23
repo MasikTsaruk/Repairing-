@@ -15,7 +15,7 @@ get_header();
             Диагностика и ремонт телефонов, ноутбуков и другой техники.
         </p>
 
-        <a href="#services">
+        <a href="./services/">
             Посмотреть услуги
         </a>
     </div>
@@ -26,6 +26,7 @@ get_header();
         <h2>Наши услуги</h2>
     </div>
 </section>
+
 
 <?php
 get_footer();

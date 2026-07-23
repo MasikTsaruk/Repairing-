@@ -18,7 +18,7 @@ if (!defined('ABSPATH')) {
     <?php wp_body_open(); ?>
 
     <header class="site-header">
-        <div class="container">
+        <div class="container" style="background-color: aqua">
 
             <div class="site-logo">
                 <?php if (has_custom_logo()) : ?>
@@ -30,6 +30,18 @@ if (!defined('ABSPATH')) {
                 <?php endif; ?>
             </div>
 
+            <div class="">
+                <a href="<?php echo esc_url(home_url('/about')); ?>">
+                    About
+                </a>
+                <a href="<?php echo esc_url(home_url('/all-pages')); ?>">
+                    Blog
+                </a>
+                <a href="<?php echo esc_url(home_url('/services')); ?>">
+                    Services
+                </a>
+                <?php get_search_form(); ?>
+            </div>
             <nav class="site-navigation" aria-label="Main Nav">
                 <?php
                 wp_nav_menu([
