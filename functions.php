@@ -62,3 +62,18 @@ function electro_service_assets(): void
         true
     );
 }
+add_action('wp_enqueue_scripts', 'electro_service_assets');
+
+function electro_service_widgets_init(): void
+{
+    register_sidebar([
+        'name'          => __('Blog Sidebar', 'electro-service'),
+        'id'            => 'sidebar-1',
+        'before_widget' => '<section class="widget">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ]);
+}
+
+add_action('widgets_init', 'electro_service_widgets_init');
