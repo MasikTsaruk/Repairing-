@@ -5,8 +5,7 @@ Template Name: Archive Page
 
 get_header();
 ?>
-
-<main class="posts-archive">
+<section class="posts-archive">
     <?php
     $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
@@ -41,8 +40,6 @@ get_header();
 
     ?>
 
-    </section>
-
 
     <div class='pagination'>
         <?php
@@ -54,10 +51,10 @@ get_header();
             'total' => $posts_query->max_num_pages
         ));
         ?>
-        <div>
+    </div>
 
 
 
-</main>
+</section>
 
 <?php get_footer(); ?>

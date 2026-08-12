@@ -48,16 +48,31 @@ add_action('after_setup_theme', 'electro_service_setup');
 function electro_service_assets(): void
 {
     wp_enqueue_style(
+        'bootstrap',
+        'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css',
+        [],
+        '5.1.3'
+    );
+
+    wp_enqueue_style(
         'electro-service-main',
         get_template_directory_uri() . '/assets/css/main.css',
-        [],
+        ['bootstrap'],
         '1.0.0'
+    );
+
+    wp_enqueue_script(
+        'bootstrap',
+        'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js',
+        [],
+        '5.1.3',
+        true
     );
 
     wp_enqueue_script(
         'electro-service-main',
         get_template_directory_uri() . '/assets/js/main.js',
-        [],
+        ['bootstrap'],
         '1.0.0',
         true
     );
