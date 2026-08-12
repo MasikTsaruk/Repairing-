@@ -22,7 +22,7 @@ get_header();
                 </h2>
 
                 <div class="entry-content">
-                    <?php the_content(); ?>
+                    <?php the_excerpt(); ?>
                 </div>
 
             </article>
